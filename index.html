@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shariq Ahmad — Data Analyst & ML</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d1117;
+      --text:#e6edf3;
+      --muted:#9da5b4;
+      --accent:#3b82f6; 
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;
+      background:var(--bg);
+      color:var(--text);
+      padding:24px;
+      line-height:1.5;
+    }
+    .container{max-width:900px;margin:0 auto}
+    header{padding:48px 0}
+    h1{font-size:40px;font-weight:700;margin-bottom:8px}
+    h2{font-size:28px;margin:32px 0 16px}
+    p{color:var(--muted);max-width:650px}
+    .btns{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+    }
+    .btn.outline{
+      border:1px solid var(--accent);
+      background:transparent;
+      color:var(--accent);
+    }
+    .projects{
+      margin-top:32px;
+    }
+    .project-card{
+      background:#161b22;
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:16px;
+    }
+    .project-card h3{margin-bottom:6px}
+    .project-card p{margin-bottom:8px}
+    footer{margin-top:48px;padding:16px 0;text-align:center;color:var(--muted);font-size:14px}
+    @media(max-width:600px){
+      h1{font-size:28px}
+      h2{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <h1>Shariq Ahmad</h1>
+      <p>Data Analyst & Machine Learning Enthusiast — skilled in Python, SQL, Power BI, and building data-driven models.</p>
+
+      <div class="btns">
+        <a href="Shariq Resume.pdf" class="btn" target="_blank">📄 Resume</a>
+        <a href="https://github.com/Shariq29" class="btn outline" target="_blank">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/shariq-ahmad-a04147234" class="btn outline" target="_blank">🔗 LinkedIn</a>
+      </div>
+    </header>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>Birth Weight Predictor</h3>
+        <p><strong>Tech:</strong> Python, scikit-learn, Flask </p>
+        <p>Regression-based model that predicts newborn birth weight with 12% MAE improvement.</p>
+        <a href="https://github.com/Shariq29/Birth-Weight-Predictor" target="_blank" class="btn outline">View Code</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Customer Churn Prediction</h3>
+        <p><strong>Tech:</strong> Python, Pandas, Scikit-learn, Power BI</p>
+        <p>Used ML to detect telecom churn with 87% accuracy and interactive BI dashboards.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Retail Sales Forecasting</h3>
+        <p><strong>Tech:</strong> SQL, Prophet, Tableau</p>
+        <p>Time-series forecasting across multiple stores with 8.1% better MAPE than baseline.</p>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2025 — Designed & Built by Shariq Ahmad
+    </footer>
+  </div>
+
+</body>
+</html>
