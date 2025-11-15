@@ -5,7 +5,7 @@ email: "shariqsayeed33@gmail.com"
 url: "https://shariq29.github.io"
 baseurl: "" # Leave empty for user.github.io sites
 
-theme: minima  # Important: disables Jekyll themes if you're using custom HTML/CSS
+theme: jekyll-theme-cayman
 
 markdown: kramdown
 highlighter: rouge
