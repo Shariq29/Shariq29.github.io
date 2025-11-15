@@ -1,75 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shariq Ahmad — Data Analyst & ML</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Shariq Ahmad Kachoo — Data Scientist & ML Engineer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Shariq Ahmad — Data Analyst skilled in Python, Machine Learning, SQL, Analytics & Visualization." />
+  <meta name="keywords" content="Data Analyst, Machine Learning, Python, SQL, Power BI, Tableau, Portfolio" />
+  <meta name="author" content="Shariq Ahmad" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Shariq Ahmad — Data Analyst Portfolio" />
+  <meta property="og:description" content="Machine Learning & Analytics Portfolio showcasing data projects." />
+  <meta property="og:image" content="assets/preview.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#0d1117;
-      --text:#e6edf3;
-      --muted:#9da5b4;
-      --accent:#3b82f6; 
+    :root {
+      --bg-dark:#0d1117;
+      --text-dark:#e6edf3;
+      --muted-dark:#9da5b4;
+      --card-dark:#161b22;
+
+      --bg-light:#ffffff;
+      --text-light:#111111;
+      --muted-light:#444444;
+      --card-light:#f6f8fa;
+
+      --accent:#3b82f6;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;
+
+    /* Theme logic */
+    [data-theme="dark"] {
+      --bg: var(--bg-dark);
+      --text: var(--text-dark);
+      --muted: var(--muted-dark);
+      --card: var(--card-dark);
+    }
+    [data-theme="light"] {
+      --bg: var(--bg-light);
+      --text: var(--text-light);
+      --muted: var(--muted-light);
+      --card: var(--card-light);
+    }
+
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
       background:var(--bg);
       color:var(--text);
+      line-height:1.6;
       padding:24px;
-      line-height:1.5;
+      transition: all 0.3s ease;
     }
-    .container{max-width:900px;margin:0 auto}
-    header{padding:48px 0}
-    h1{font-size:40px;font-weight:700;margin-bottom:8px}
-    h2{font-size:28px;margin:32px 0 16px}
-    p{color:var(--muted);max-width:650px}
-    .btns{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{
+
+    .container { max-width:900px; margin:0 auto; }
+
+    header { padding:60px 0; }
+
+    h1 { font-size:42px; font-weight:700; margin-bottom:10px; }
+
+    h2 { font-size:28px; margin:40px 0 20px; }
+
+    p { color:var(--muted); max-width:650px; }
+
+    .btns { margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn {
       background:var(--accent);
       color:white;
       padding:10px 16px;
       border-radius:8px;
-      text-decoration:none;
       font-weight:600;
-      display:inline-block;
+      text-decoration:none;
+      transition:0.25s;
     }
-    .btn.outline{
-      border:1px solid var(--accent);
+    .btn:hover { opacity:0.85; }
+
+    .btn.outline {
       background:transparent;
+      border:1px solid var(--accent);
       color:var(--accent);
     }
-    .projects{
-      margin-top:32px;
+
+    /* Theme Toggle */
+    #theme-toggle {
+      position:fixed;
+      top:20px;
+      right:20px;
+      background:var(--card);
+      padding:10px;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:14px;
     }
-    .project-card{
-      background:#161b22;
+
+    .projects { margin-top:40px; }
+
+    .project-card {
+      background:var(--card);
       padding:18px;
       border-radius:10px;
-      margin-bottom:16px;
+      margin-bottom:20px;
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .project-card h3{margin-bottom:6px}
-    .project-card p{margin-bottom:8px}
-    footer{margin-top:48px;padding:16px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    .project-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .project-card img {
+      width:100%;
+      border-radius:8px;
+      margin-bottom:10px;
+    }
+
+    /* Contact Form */
+    form {
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:10px;
+    }
+    input, textarea {
+      padding:10px;
+      border-radius:6px;
+      border:1px solid #666;
+      background:var(--bg);
+      color:var(--text);
+    }
+    button {
+      background:var(--accent);
+      border:none;
+      padding:10px;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    footer {
+      margin-top:50px;
+      padding:16px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     @media(max-width:600px){
-      h1{font-size:28px}
-      h2{font-size:22px}
+      h1{font-size:32px;}
+      h2{font-size:24px;}
     }
   </style>
 </head>
+
 <body>
+  <div id="theme-toggle">🌙 Dark Mode</div>
+
   <div class="container">
-    
     <header>
       <h1>Shariq Ahmad</h1>
-      <p>Data Analyst & Machine Learning Enthusiast — skilled in Python, SQL, Power BI, and building data-driven models.</p>
+      <p>Data Analyst & Machine Learning Enthusiast — skilled in Python, SQL, Power BI, and building data-driven ML systems.</p>
 
       <div class="btns">
-        <a href="Shariq Resume.pdf" class="btn" target="_blank">📄 Resume</a>
-        <a href="https://github.com/Shariq29" class="btn outline" target="_blank">💻 GitHub</a>
-        <a href="https://www.linkedin.com/in/shariq-ahmad-a04147234" class="btn outline" target="_blank">🔗 LinkedIn</a>
+        <a href="Shariq Resume.pdf" target="_blank" class="btn">📄 Resume</a>
+        <a href="https://github.com/Shariq29" target="_blank" class="btn outline">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/shariq-ahmad-a04147234" target="_blank" class="btn outline">🔗 LinkedIn</a>
       </div>
     </header>
 
@@ -77,30 +181,68 @@
       <h2>Projects</h2>
 
       <div class="project-card">
+        <img src="assets/birth.png" alt="Birth weight project">
         <h3>Birth Weight Predictor</h3>
-        <p><strong>Tech:</strong> Python, scikit-learn, Flask </p>
-        <p>Regression-based model that predicts newborn birth weight with 12% MAE improvement.</p>
-        <a href="https://github.com/Shariq29/Birth-Weight-Predictor" target="_blank" class="btn outline">View Code</a>
+        <p><strong>Tech:</strong> Python, scikit-learn, Flask</p>
+        <p>Regression model predicting baby weight with 12% lower MAE. Deployed using Flask.</p>
+        <a href="https://github.com/Shariq29/Birth-Weight-Predictor" class="btn outline" target="_blank">View Code</a>
       </div>
 
       <div class="project-card">
+        <img src="assets/churn.png" alt="Churn project">
         <h3>Customer Churn Prediction</h3>
-        <p><strong>Tech:</strong> Python, Pandas, Scikit-learn, Power BI</p>
-        <p>Used ML to detect telecom churn with 87% accuracy and interactive BI dashboards.</p>
+        <p><strong>Tech:</strong> Python, Scikit-learn, Power BI</p>
+        <p>Predicted telecom churn with 87% accuracy and built BI dashboards.</p>
       </div>
 
       <div class="project-card">
+        <img src="assets/sales.png" alt="Sales forecasting project">
         <h3>Retail Sales Forecasting</h3>
         <p><strong>Tech:</strong> SQL, Prophet, Tableau</p>
-        <p>Time-series forecasting across multiple stores with 8.1% better MAPE than baseline.</p>
+        <p>Time-series forecasting across stores with 8.1% improved MAPE.</p>
       </div>
+    </section>
 
+    <section>
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xwpkaeja" method="POST">
+        <input name="name" type="text" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
 
     <footer>
-      © 2025 — Designed & Built by Shariq Ahmad
+      © 2025 — Built & Designed by Shariq Ahmad
     </footer>
   </div>
+
+  <!-- Dark/Light Mode Toggle -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      if (document.documentElement.getAttribute("data-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+        toggle.textContent = "🌙 Dark Mode";
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        toggle.textContent = "☀️ Light Mode";
+      }
+    });
+  </script>
+
+  <!-- Google Analytics -->
+  <!-- Replace UA-XXXXX-X with your real ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-X');
+  </script>
+  -->
 
 </body>
 </html>
