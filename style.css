@@ -1,0 +1,77 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+/* 1. Global Reset: Apply to all elements (*) to normalize browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* 2. Typography and Base Styles: Set the foundation for the entire page */
+body {
+    /* Assuming Google Fonts (Inter and Poppins) are linked in index.html's <head> */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6; /* Excellent for readability */
+    color: #333; /* Dark gray for good contrast */
+    background-color: #f4f4f4; /* Light background */
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    margin-bottom: 0.5em; /* Space below headings */
+}
+
+/* 3. Layout Example: Styling the Navigation Bar (assuming a class="navbar" in index.html) */
+.navbar {
+    display: flex; /* Activate Flexbox for horizontal alignment */
+    justify-content: space-between; /* Pushes logo/title to left, menu to right */
+    align-items: center; /* Vertically aligns items in the center */
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* 4. Button Styling (General Example) */
+.cta-button {
+    /* Use your chosen Primary Color for the background */
+    background-color: #007bff; /* Example Primary Color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; /* Remove underline from link */
+    border: none;
+    border-radius: 5px; /* Subtle rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Slightly darker shade on hover */
+}
+
+/* 5. Whitespace and Section Padding (for main content sections) */
+section {
+    padding: 80px 50px; /* Generous vertical and horizontal padding for spacing */
+    margin-bottom: 20px;
+}
+
+/* 6. Responsive Design: Media Queries for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+    /* Adjust padding for the navigation bar */
+    .navbar {
+        flex-direction: column; /* Stack navigation items vertically on small screens */
+        padding: 15px;
+    }
+
+    /* Adjust padding for main content sections */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Shrink large font sizes for better viewing on mobile */
+    h1 {
+        font-size: 2em;
+    }
+}
