@@ -2,14 +2,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    box-sizing: border-box;
 }
 
 /* 2. Typography and Base Styles: Set the foundation for the entire page */
 body {
     /* Assuming Google Fonts (Inter and Poppins) are linked in index.html's <head> */
     font-family: 'Inter', sans-serif;
-    line-height: 1.6; /* Excellent for readability */
+    line-height: 1.6;
     color: #333; /* Dark gray for good contrast */
     background-color: #f4f4f4; /* Light background */
 }
@@ -17,17 +17,17 @@ body {
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     color: #222;
-    margin-bottom: 0.5em; /* Space below headings */
+    margin-bottom: 0.5em;
 }
 
 /* 3. Layout Example: Styling the Navigation Bar (assuming a class="navbar" in index.html) */
 .navbar {
-    display: flex; /* Activate Flexbox for horizontal alignment */
-    justify-content: space-between; /* Pushes logo/title to left, menu to right */
-    align-items: center; /* Vertically aligns items in the center */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 50px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 4. Button Styling (General Example) */
@@ -36,10 +36,10 @@ h1, h2, h3 {
     background-color: #007bff; /* Example Primary Color */
     color: white;
     padding: 10px 20px;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none;
     border: none;
-    border-radius: 5px; /* Subtle rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
     font-weight: bold;
     cursor: pointer;
 }
@@ -50,7 +50,7 @@ h1, h2, h3 {
 
 /* 5. Whitespace and Section Padding (for main content sections) */
 section {
-    padding: 80px 50px; /* Generous vertical and horizontal padding for spacing */
+    padding: 80px 50px;
     margin-bottom: 20px;
 }
 
@@ -58,7 +58,7 @@ section {
 @media (max-width: 600px) {
     /* Adjust padding for the navigation bar */
     .navbar {
-        flex-direction: column; /* Stack navigation items vertically on small screens */
+        flex-direction: column;
         padding: 15px;
     }
 
