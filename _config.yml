@@ -1,0 +1,20 @@
+title: "Shariq Ahmad Kachoo"
+description: "Data Scientist & Machine Learning Portfolio"
+author: "Shariq Ahmad Kachoo"
+email: "shariqsayeed33@gmail.com"
+url: "https://shariq29.github.io"
+baseurl: "" # Leave empty for user.github.io sites
+
+theme: null  # Important: disables Jekyll themes if you're using custom HTML/CSS
+
+markdown: kramdown
+highlighter: rouge
+
+# Prevent Jekyll from deleting files like PDFs or assets
+include:
+  - assets
+  - Shariq Resume.pdf
+
+# GitHub Pages Defaults
+plugins:
+  - jekyll-seo-tag
